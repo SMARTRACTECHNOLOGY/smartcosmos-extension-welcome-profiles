@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>smartcosmos-extension-welcome-profiles</artifactId>
-    <version>1.0.0-development-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <name>SMART COSMOS Profiles Welcome Page Extension</name>
     <description>SMART COSMOS Profiles Welcome Page Extension</description>
