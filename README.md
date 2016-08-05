@@ -1,14 +1,17 @@
-# SMART COSMOS Profiles Welcome Page Extension
+# SMART COSMOS Profiles Welcome Page Service
 
-This extension adds a Welcome Page and other static assets to SMART COSMOS Profiles.
+This microservice adds a Welcome Page and other static assets to SMART COSMOS Profiles.
 
-To integrate this module into Profiles, add the following to your `objects.yml`:
+To integrate this module into Profiles, add the following to your `smartcosmos-gateway.yml`:
 
 ```
-serverExtensions:
-  Welcome: net.smartcosmos.extension.smartcosmos.server.extension.welcome.profiles.WelcomeExtension
-
-
-serverExtensionConfigurationPaths:
-  Welcome: path/to/your/welcome-profiles.yml
+zuul:
+  sensitiveHeaders:
+  ignoredServices: "*"
+  prefix:
+  routes:
+    ...
+    profiles-ui-welcome: /*
 ```
+
+Any requests going to the root level will be directed to the ui service accordingly.
