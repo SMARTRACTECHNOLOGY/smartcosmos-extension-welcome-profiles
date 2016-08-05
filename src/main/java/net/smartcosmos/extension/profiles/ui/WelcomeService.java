@@ -1,4 +1,4 @@
-package net.smartcosmos.extension.smartcosmos.server.extension.welcome.profiles.config;
+package net.smartcosmos.extension.profiles.ui;
 
 /*
  * *#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -20,8 +20,27 @@ package net.smartcosmos.extension.smartcosmos.server.extension.welcome.profiles.
  * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
  */
 
-import net.smartcosmos.platform.base.AbstractSmartCosmosExtensionConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-public class WelcomeExtensionConfiguration extends AbstractSmartCosmosExtensionConfiguration
-{
+import net.smartcosmos.annotation.EnableSmartCosmosEvents;
+
+@SpringBootApplication
+@EnableSmartCosmosEvents
+public class WelcomeService extends WebSecurityConfigurerAdapter {
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+
+        web.ignoring()
+            .anyRequest();
+    }
+
+    public static void main(String[] args) {
+
+        new SpringApplicationBuilder(WelcomeService.class)
+            .run(args);
+    }
 }

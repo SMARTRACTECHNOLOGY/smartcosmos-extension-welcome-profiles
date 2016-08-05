@@ -132,7 +132,7 @@ legend {
 }
 
 #cboxLoadingGraphic {
-    background: url("../../assets/jquery/colorbox/1.4.31/images/loading.gif") no-repeat center center
+    background: url("../../static/jquery/colorbox/1.4.31/images/loading.gif") no-repeat center center
 }
 
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
@@ -160,7 +160,7 @@ legend {
     top: 50%;
     left: 5px;
     margin-top: -32px;
-    background: url("../../assets/jquery/colorbox/1.4.31/images/controls.png") no-repeat top left;
+    background: url("../../static/jquery/colorbox/1.4.31/images/controls.png") no-repeat top left;
     width: 28px;
     height: 65px;
     text-indent: -9999px
@@ -175,7 +175,7 @@ legend {
     top: 50%;
     right: 5px;
     margin-top: -32px;
-    background: url("../../assets/jquery/colorbox/1.4.31/images/controls.png") no-repeat top right;
+    background: url("../../static/jquery/colorbox/1.4.31/images/controls.png") no-repeat top right;
     width: 28px;
     height: 65px;
     text-indent: -9999px
@@ -190,7 +190,7 @@ legend {
     top: 5px;
     right: 5px;
     display: block;
-    background: url("../../assets/jquery/colorbox/1.4.31/images/controls.png") no-repeat top center;
+    background: url("../../static/jquery/colorbox/1.4.31/images/controls.png") no-repeat top center;
     width: 38px;
     height: 19px;
     text-indent: -9999px
@@ -888,7 +888,7 @@ p, pre, form {
         padding: 3px 6px;
         border: 1px solid #CCC;
         border-radius: 3px;
-        behavior: url("assets/css3pie/1.0.0/PIE.htc");
+        behavior: url("static/css3pie/1.0.0/PIE.htc");
         -moz-box-sizing: border-box;
         box-shadow: 0 1px 1px #EEEEEE inset;
         transition: all 0.15s linear 0s
